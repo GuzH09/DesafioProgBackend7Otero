@@ -1,7 +1,7 @@
-import messageManagerDB from './services/MessageService.js';
-import ProductManagerDB from './services/ProductService.js';
-const PM = new ProductManagerDB();
-const CHM = new messageManagerDB();
+import MessageService from './services/MessageService.js';
+import ProductService from './services/ProductService.js';
+const PM = new ProductService();
+const CHM = new MessageService();
 
 export default (io) => {
     io.on("connection", socket => {
